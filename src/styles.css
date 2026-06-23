@@ -1,0 +1,252 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-sans: "neulis-sans", system-ui, -apple-system, sans-serif;
+  --font-display: "neulis-sans", system-ui, sans-serif;
+  --font-mono: "neulis-sans", monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-brand-900: var(--brand-900);
+  --color-brand-700: var(--brand-700);
+  --color-brand-400: var(--brand-400);
+  --color-brand-200: var(--brand-200);
+  --color-brand-50: var(--brand-50);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-surface: var(--surface);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --shadow-glass: 0 4px 16px rgba(34, 67, 102, 0.08), 0 1px 4px rgba(34, 67, 102, 0.06);
+  --shadow-glass-lg:
+    0 2px 4px rgba(34, 67, 102, 0.06),
+    0 8px 24px rgba(34, 67, 102, 0.1),
+    0 24px 48px -12px rgba(34, 67, 102, 0.18),
+    0 48px 80px -24px rgba(34, 67, 102, 0.12);
+  --shadow-elegant: 0 18px 40px -22px rgba(34, 67, 102, 0.45);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Brand palette — Thermo Películas */
+  --brand-900: #224366;
+  --brand-700: #335a82;
+  --brand-400: #7396b4;
+  --brand-200: #c4d6e6;
+  --brand-50: #eef3f8;
+  --ink: #1a2a3d;
+  --ink-soft: #5a6b80;
+  --surface: #ffffff;
+
+  /* shadcn tokens mapped to brand */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.22 0.04 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.04 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.04 250);
+  --primary: oklch(0.36 0.07 247);
+  --primary-foreground: oklch(0.99 0.005 240);
+  --secondary: oklch(0.96 0.012 240);
+  --secondary-foreground: oklch(0.36 0.07 247);
+  --muted: oklch(0.96 0.012 240);
+  --muted-foreground: oklch(0.48 0.03 250);
+  --accent: oklch(0.92 0.03 240);
+  --accent-foreground: oklch(0.36 0.07 247);
+  --destructive: oklch(0.6 0.21 27);
+  --destructive-foreground: oklch(0.99 0.005 240);
+  --border: oklch(0.91 0.02 240);
+  --input: oklch(0.91 0.02 240);
+  --ring: oklch(0.65 0.06 240);
+
+  --chart-1: oklch(0.36 0.07 247);
+  --chart-2: oklch(0.6 0.08 240);
+  --chart-3: oklch(0.75 0.05 240);
+  --chart-4: oklch(0.5 0.1 240);
+  --chart-5: oklch(0.4 0.1 250);
+  --sidebar: oklch(0.99 0.003 240);
+  --sidebar-foreground: oklch(0.22 0.04 250);
+  --sidebar-primary: oklch(0.36 0.07 247);
+  --sidebar-primary-foreground: oklch(0.99 0.005 240);
+  --sidebar-accent: oklch(0.96 0.012 240);
+  --sidebar-accent-foreground: oklch(0.36 0.07 247);
+  --sidebar-border: oklch(0.91 0.02 240);
+  --sidebar-ring: oklch(0.65 0.06 240);
+}
+
+@utility glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow-glass);
+}
+
+@utility glass-strong {
+  background:
+    linear-gradient(160deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.42) 40%,
+      rgba(196, 214, 230, 0.32) 100%);
+  backdrop-filter: blur(10px) saturate(130%) brightness(1.04) contrast(1.02);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-top-color: rgba(255, 255, 255, 0.95);
+  border-left-color: rgba(255, 255, 255, 0.88);
+  box-shadow:
+    var(--shadow-glass-lg),
+    var(--glass-highlight);
+}
+
+@utility glass-strong-2 {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px) saturate(100%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: var(--shadow-glass-lg);
+}
+
+@utility glass-tinted {
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(196, 214, 230, 0.35) 100%);
+  backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow-glass);
+}
+
+@utility section-shell {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  gap: 1rem;
+  padding-left: 6vw;
+  padding-right: 6vw;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 1280px) {
+  .section-shell {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+}
+
+@media (min-width: 1536px) {
+  .section-shell {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+
+
+  body {
+    background-color: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "ss02";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+
+  ::selection {
+    background: var(--brand-200);
+    color: var(--brand-900);
+  }
+}
+
+/* Background gradient ambience for light sections */
+.bg-ambient {
+  background:
+    radial-gradient(60% 50% at 10% 0%, rgba(115, 150, 180, 0.18), transparent 60%),
+    radial-gradient(50% 40% at 100% 100%, rgba(34, 67, 102, 0.1), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f5f8fb 100%);
+}
+
+.bg-ambient-soft {
+  background: linear-gradient(180deg, #ffffff 0%, #eef3f8 100%);
+}
+
+/* ─── Preloader exit — applied by JS in Preloader.tsx ─── */
+/* All other preloader styles are inline in __root.tsx (RootShell) */
+#site-preloader.preloader-exit {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.85s linear !important;
+}
