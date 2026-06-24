@@ -51,7 +51,7 @@ export function Header() {
         )}
       >
         <a href="#hero" aria-label="Thermo Películas — início" className="min-w-0">
-          <img src={logoDefault} alt="Thermo Películas Logo" className="h-12 pl-[0.4rem] w-auto" />
+          <img src={logoDefault} alt="Thermo Películas Logo" className="h-10 pl-[0.4rem] w-auto" />
         </a>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegação principal">
           {NAV.map((item) => (

@@ -149,6 +149,13 @@
   box-shadow: var(--shadow-glass-lg);
 }
 
+@utility glass-strong-3 {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px) saturate(100%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: var(--shadow-glass);
+}
+
 @utility glass-tinted {
   background: linear-gradient(135deg,
       rgba(255, 255, 255, 0.6) 0%,
@@ -156,6 +163,16 @@
   backdrop-filter: blur(22px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: var(--shadow-glass);
+}
+
+@utility glass-dark {
+  background: rgba(26, 42, 61, 0.45);
+  /* Baseada na cor ink */
+  backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top-color: rgba(255, 255, 255, 0.2);
+  border-left-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
 @utility section-shell {
@@ -167,6 +184,17 @@
   padding-right: 6vw;
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+@utility section-shell-alt {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  gap: 1rem;
+  padding-left: 4vw !important;
+  padding-right: 4vw !important;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
 }
 
 @media (min-width: 1280px) {

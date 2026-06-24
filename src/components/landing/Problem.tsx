@@ -40,7 +40,7 @@ export function Problem() {
         </PreTitle>
         <h2
           id="problema-title"
-          className="mt-4 text-[clamp(1.75rem,3.4vw,2.75rem)] font-extrabold leading-tight text-brand-900"
+          className="mt-4 text-[clamp(2.1rem,4.08vw,3.3rem)] font-extrabold leading-tight text-brand-900"
         >
           Você reconhece alguma destas situações na sua rotina?
         </h2>

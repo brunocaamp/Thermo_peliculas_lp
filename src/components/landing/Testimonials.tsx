@@ -50,14 +50,14 @@ export function Testimonials() {
   );
 
   return (
-    <SectionShell id="depoimentos" aria-labelledby="depoimentos-title">
-      <Reveal className="col-span-12 mx-auto max-w-3xl text-center lg:col-span-10 lg:col-start-2">
-        <PreTitle>
+    <div id="depoimentos" aria-labelledby="depoimentos-title" className="section-shell-alt bg-gradient-to-br rounded-3xl from-ink to-brand-900 ml-[4vw] mr-[4vw] lg:ml-[6vw] lg:mr-[6vw] shadow-2xl">
+      <Reveal className="col-span-12 mx-auto max-w-[80%] text-center lg:col-span-12 lg:col-start-1">
+        <PreTitle variant="default">
           Depoimentos
         </PreTitle>
         <h2
           id="depoimentos-title"
-          className="mt-4 text-[clamp(1.75rem,3.4vw,2.75rem)] font-extrabold leading-tight text-brand-900"
+          className="mt-4 text-[clamp(2.1rem,4.08vw,3.3rem)] font-extrabold leading-tight text-white"
         >
           Quem protege a casa com a Thermo Películas comprova a eficiência.
         </h2>
@@ -72,34 +72,36 @@ export function Testimonials() {
           <CarouselContent className="-ml-4">
             {REVIEWS.map((r) => (
               <CarouselItem key={r.author} className="pl-4 md:basis-1/2 xl:basis-1/3">
-                <GlassCard variant="strong" className="relative h-full p-7 sm:p-8">
-                  <Quote
-                    aria-hidden="true"
-                    className="absolute right-6 top-6 h-10 w-10 text-brand-200"
-                  />
-                  <div className="flex items-center gap-1 text-brand-900">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-current" />
-                    ))}
-                  </div>
-                  <h3 className="mt-4 font-display text-lg font-bold leading-snug text-brand-900">
-                    {r.headline}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-ink-soft">{r.body}</p>
-                  <div className="mt-6 border-t border-brand-200/50 pt-4">
-                    <p className="text-sm font-semibold text-brand-900">{r.author}</p>
-                    <p className="text-xs text-ink-soft">{r.city}</p>
-                  </div>
-                </GlassCard>
+                <div className="h-full p-4 sm:p-6">
+                  <GlassCard variant="dark" className="relative h-full p-7 sm:p-8">
+                    <Quote
+                      aria-hidden="true"
+                      className="absolute right-6 top-6 h-10 w-10 text-white/10"
+                    />
+                    <div className="flex items-center gap-1 text-brand-400">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-current" />
+                      ))}
+                    </div>
+                    <h3 className="mt-4 font-display text-lg font-bold leading-snug text-white">
+                      {r.headline}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-brand-50/80">{r.body}</p>
+                    <div className="mt-6 border-t border-white/10 pt-4">
+                      <p className="text-sm font-semibold text-white">{r.author}</p>
+                      <p className="text-xs text-brand-50/60">{r.city}</p>
+                    </div>
+                  </GlassCard>
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
           <div className="mt-8 flex items-center justify-center gap-3">
-            <CarouselPrevious className="static translate-y-0 border-brand-900/15 bg-white/70 text-brand-900 hover:bg-white hover:text-brand-900" />
-            <CarouselNext className="static translate-y-0 border-brand-900/15 bg-white/70 text-brand-900 hover:bg-white hover:text-brand-900" />
+            <CarouselPrevious className="static translate-y-0 border-white/10 bg-white/5 text-white hover:bg-white/15 hover:text-white" />
+            <CarouselNext className="static translate-y-0 border-white/10 bg-white/5 text-white hover:bg-white/15 hover:text-white" />
           </div>
         </Carousel>
       </div>
-    </SectionShell>
+    </div>
   );
 }

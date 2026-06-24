@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useServerFn } from "@tanstack/react-start";
 import { toast } from "sonner";
 import { ArrowRight, MapPin, MessageCircle, Phone } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { SectionShell } from "./ui/SectionShell";
@@ -50,8 +51,8 @@ export function ContactForm() {
   });
 
   return (
-    <SectionShell id="contato" aria-labelledby="contato-title">
-      <Reveal className="col-span-12 mx-auto max-w-3xl text-center lg:col-span-10 lg:col-start-2">
+    <SectionShell id="contato" aria-labelledby="contato-title" className="relative z-2">
+      <Reveal className="col-span-12 mx-auto max-w-xl text-center lg:col-span-10 lg:col-start-2">
         <PreTitle>
           Solicite seu orçamento
         </PreTitle>
@@ -60,12 +61,56 @@ export function ContactForm() {
           className="mt-4 text-[clamp(1.75rem,3.6vw,2.9rem)] font-extrabold leading-tight text-brand-900"
         >
           Casas inteligentes não sofrem com o calor.
-          <br className="hidden sm:block" />
-          Faça uma escolha inteligente.
         </h2>
         <p className="mt-4 text-base text-ink-soft sm:text-lg">
-          Preencha o formulário ou fale direto com nossa equipe pelo WhatsApp.
+          Preencha o formulário ou fale direto com nossa equipe de vendas pelo WhatsApp.
         </p>
+      </Reveal>
+
+      <Reveal
+        delay={0.1}
+        className="col-span-12 lg:col-span-5 lg:self-stretch"
+      >
+        <div className="flex h-full flex-col gap-4 mt-10">
+          <GlassCard className="p-6 sm:p-8">
+            <div className="flex flex-col gap-4">
+              <a
+                href="https://wa.me/5524999999999?text=Ol%C3%A1%20Thermo%2C%20gostaria%20de%20um%20or%C3%A7amento"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4 rounded-3xl bg-[#25D366] p-5 text-white transition-all duration-300 hover:bg-[#128C7E] hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#25D366]/30"
+              >
+                <WhatsAppIcon className="h-8 w-8 shrink-0 transition-transform duration-300 group-hover:scale-110" />
+                <div className="min-w-0">
+                  <p className="text-sm font-bold uppercase tracking-wider text-white/80">
+                    WhatsApp
+                  </p>
+                  <p className="truncate text-lg font-extrabold">Conversar agora</p>
+                </div>
+              </a>
+              <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4 rounded-3xl bg-white/80 p-5 text-brand-900 shadow-sm">
+                <Phone className="h-7 w-7 shrink-0 text-brand-700" />
+                <div className="min-w-0">
+                  <p className="text-sm font-bold uppercase tracking-wider text-ink-soft">
+                    Telefone
+                  </p>
+                  <p className="truncate text-lg font-extrabold">(24) 99999-9999</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4 rounded-3xl bg-white/80 p-5 text-brand-900 shadow-sm">
+                <MapPin className="h-7 w-7 shrink-0 text-brand-700" />
+                <div className="min-w-0">
+                  <p className="text-sm font-bold uppercase tracking-wider text-ink-soft">
+                    Atendimento
+                  </p>
+                  <p className="text-base font-extrabold sm:text-lg leading-tight">
+                    Volta Redonda e Sul Fluminense
+                  </p>
+                </div>
+              </div>
+            </div>
+          </GlassCard>
+        </div>
       </Reveal>
 
       <Reveal className="col-span-12 mt-10 lg:col-span-7">
@@ -143,67 +188,7 @@ export function ContactForm() {
         </GlassCard>
       </Reveal>
 
-      <Reveal
-        delay={0.1}
-        className="col-span-12 lg:col-span-5 lg:self-stretch"
-      >
-        <div className="flex h-full flex-col gap-4">
-          <div className="relative overflow-hidden rounded-3xl shadow-[var(--shadow-glass-lg)]">
-            <img
-              src={familyAsset.url}
-              alt="Família reunida em sala iluminada e fresca"
-              width={1500}
-              height={840}
-              loading="lazy"
-              className="aspect-[5/4] w-full object-cover lg:aspect-[4/5]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-900/60 via-brand-900/15 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-6">
-              <p className="font-display text-xl font-bold text-white sm:text-2xl">
-                Mais conforto. Mais luz. Mais família aproveitando a casa.
-              </p>
-            </div>
-          </div>
-          <GlassCard className="p-5">
-            <div className="flex flex-col gap-3">
-              <a
-                href="https://wa.me/5524999999999?text=Ol%C3%A1%20Thermo%2C%20gostaria%20de%20um%20or%C3%A7amento"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 rounded-2xl bg-brand-900 px-4 py-3 text-white transition-colors hover:bg-brand-700"
-              >
-                <MessageCircle className="h-5 w-5 shrink-0" />
-                <div className="min-w-0">
-                  <p className="text-xs font-medium uppercase tracking-wider text-white/70">
-                    WhatsApp
-                  </p>
-                  <p className="truncate text-sm font-semibold">Conversar agora</p>
-                </div>
-              </a>
-              <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 rounded-2xl bg-white/70 px-4 py-3 text-brand-900">
-                <Phone className="h-5 w-5 shrink-0" />
-                <div className="min-w-0">
-                  <p className="text-xs font-medium uppercase tracking-wider text-ink-soft">
-                    Telefone
-                  </p>
-                  <p className="truncate text-sm font-semibold">(24) 99999-9999</p>
-                </div>
-              </div>
-              <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3 rounded-2xl bg-white/70 px-4 py-3 text-brand-900">
-                <MapPin className="h-5 w-5 shrink-0" />
-                <div className="min-w-0">
-                  <p className="text-xs font-medium uppercase tracking-wider text-ink-soft">
-                    Atendimento
-                  </p>
-                  <p className="truncate text-sm font-semibold">
-                    Volta Redonda e Sul Fluminense
-                  </p>
-                </div>
-              </div>
-            </div>
-          </GlassCard>
-        </div>
-      </Reveal>
+
     </SectionShell>
   );
 }

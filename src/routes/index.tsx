@@ -13,6 +13,7 @@ import { Testimonials } from "@/components/landing/Testimonials";
 import { Faq } from "@/components/landing/Faq";
 import { ContactForm } from "@/components/landing/ContactForm";
 import { Footer } from "@/components/landing/Footer";
+import { FloatingWhatsApp } from "@/components/landing/FloatingWhatsApp";
 
 const TITLE =
   "Thermo Películas — Películas Nanocerâmicas em Volta Redonda e Sul Fluminense";
@@ -79,14 +80,15 @@ function LandingPage() {
         <Hero />
         <Problem />
         <Solution />
-        <Benefits />
         <Comparison />
+        <Benefits />
         <HowItWorks />
         <Testimonials />
         <Faq />
         <ContactForm />
       </main>
       <Footer />
+      <FloatingWhatsApp />
       <Toaster position="top-center" richColors closeButton />
     </div>
   );

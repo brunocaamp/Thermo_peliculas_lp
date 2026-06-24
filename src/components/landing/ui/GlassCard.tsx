@@ -1,7 +1,7 @@
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-type Variant = "default" | "strong" | "strong2" | "tinted";
+type Variant = "default" | "strong" | "strong2" | "strong3" | "tinted" | "dark";
 
 type GlassCardProps = ComponentPropsWithoutRef<"div"> & {
   children: ReactNode;
@@ -13,7 +13,9 @@ const VARIANTS: Record<Variant, string> = {
   default: "glass",
   strong: "glass-strong",
   strong2: "glass-strong-2",
+  strong3: "glass-strong-3",
   tinted: "glass-tinted",
+  dark: "glass-dark",
 };
 
 export function GlassCard({

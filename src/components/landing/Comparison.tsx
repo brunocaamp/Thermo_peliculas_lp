@@ -9,12 +9,16 @@ const WITHOUT = [
   "Excesso de calor exigindo o máximo do ar-condicionado.",
   "Móveis e pisos sofrendo desbotamento contínuo.",
   "Necessidade de manter cortinas fechadas bloqueando a vista.",
+  "Aumento do consumo de energia devido à refrigeração constante.",
+  "Desconforto visual causado pelo excesso de claridade e reflexos.",
 ];
 
 const WITH = [
   "Temperatura controlada desde os vidros.",
   "Interior da casa preservado por muito mais tempo.",
   "Luz natural liberada sem o desconforto térmico.",
+  "Economia significativa de energia elétrica o ano todo.",
+  "Conforto visual aprimorado com redução do cansaço ocular.",
 ];
 
 export function Comparison() {
@@ -26,14 +30,14 @@ export function Comparison() {
         </PreTitle>
         <h2
           id="comparativo-title"
-          className="mt-4 text-[clamp(1.75rem,3.4vw,2.75rem)] font-extrabold leading-tight text-brand-900"
+          className="mt-4 text-[clamp(2.1rem,4.08vw,3.3rem)] font-extrabold leading-tight text-brand-900"
         >
           Com e sem Thermo Películas
         </h2>
       </Reveal>
 
       <Reveal delay={0.05} className="col-span-12 mt-10 md:col-span-6">
-        <GlassCard className="h-full overflow-hidden p-7 sm:p-9">
+        <GlassCard className="h-full overflow-hidden p-7 sm:p-9 bg-red-500/10">
           <div
             aria-hidden="true"
             className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-rose-400/0 via-rose-400/70 to-rose-400/0"
@@ -55,7 +59,7 @@ export function Comparison() {
       <Reveal delay={0.12} className="col-span-12 mt-2 md:col-span-6 md:mt-10">
         <GlassCard
           variant="tinted"
-          className="relative h-full overflow-hidden p-7 sm:p-9"
+          className="relative h-full overflow-hidden p-7 sm:p-9 bg-green-500/10"
         >
           <div
             aria-hidden="true"

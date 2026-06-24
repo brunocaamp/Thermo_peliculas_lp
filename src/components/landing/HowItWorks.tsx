@@ -2,6 +2,7 @@ import { SectionShell } from "./ui/SectionShell";
 import { GlassCard } from "./ui/GlassCard";
 import { Reveal } from "./ui/Reveal";
 import { PreTitle } from "./ui/PreTitle";
+import { PrimaryCTA, WhatsAppCTA } from "./ui/ActionButtons";
 
 const STEPS = [
   {
@@ -28,14 +29,14 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <SectionShell id="como-funciona" aria-labelledby="como-title">
+    <SectionShell id="como-funciona" aria-labelledby="como-title" className="pb-20">
       <Reveal className="col-span-12 mx-auto max-w-3xl text-center lg:col-span-10 lg:col-start-2">
         <PreTitle>
           Como funciona
         </PreTitle>
         <h2
           id="como-title"
-          className="mt-4 text-[clamp(1.75rem,3.4vw,2.75rem)] font-extrabold leading-tight text-brand-900"
+          className="mt-4 text-[clamp(2.1rem,4.08vw,3.3rem)] font-extrabold leading-tight text-brand-900"
         >
           Instalação rápida e sem quebra-quebra.
         </h2>
@@ -63,6 +64,16 @@ export function HowItWorks() {
             </GlassCard>
           </Reveal>
         ))}
+      </div>
+      <div className="col-span-12 mt-2 md:mt-10 justify-center items-center flex">
+        <div className="mt-7 flex flex-wrap items-center gap-3">
+          <PrimaryCTA href="#contato">
+            Solicitar orçamento
+          </PrimaryCTA>
+          <WhatsAppCTA href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20Thermo%20Pel%C3%ADculas">
+            Falar no WhatsApp
+          </WhatsAppCTA>
+        </div>
       </div>
     </SectionShell>
   );

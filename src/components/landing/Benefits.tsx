@@ -1,5 +1,6 @@
 import { Thermometer, ShieldCheck, Zap, Eye } from "lucide-react";
 import { SectionShell } from "./ui/SectionShell";
+import benefitsBg from "../../assets/landing/benefits_bg.jpg";
 import { GlassCard } from "./ui/GlassCard";
 import { Reveal } from "./ui/Reveal";
 import { PreTitle } from "./ui/PreTitle";
@@ -40,33 +41,37 @@ export function Benefits() {
         </PreTitle>
         <h2
           id="beneficios-title"
-          className="mt-4 text-[clamp(1.75rem,3.4vw,2.75rem)] font-extrabold leading-tight text-brand-900"
+          className="mt-4 text-[clamp(2.1rem,4.08vw,3.3rem)] font-extrabold leading-tight text-brand-900"
         >
           Por que escolher a tecnologia nanocerâmica?
         </h2>
-        <p className="mt-4 text-base text-ink-soft sm:text-lg">
+        {/* <p className="mt-4 text-base text-ink-soft sm:text-lg">
           Quatro ganhos imediatos que você sente no primeiro dia depois da instalação.
-        </p>
+        </p> */}
       </Reveal>
-
-      <div className="col-span-12 mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
-        {BENEFITS.map((b, i) => (
-          <Reveal key={b.title} delay={i * 0.06}>
-            <GlassCard
-              interactive
-              variant="tinted"
-              className="group flex h-full flex-col p-6 sm:p-7"
-            >
-              <div className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brand-900 to-brand-700 text-white shadow-[var(--shadow-elegant)] transition-transform duration-500 group-hover:scale-110">
-                <b.icon className="h-6 w-6" />
-              </div>
-              <h3 className="mt-5 font-display text-lg font-bold text-brand-900">
-                {b.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">{b.body}</p>
-            </GlassCard>
-          </Reveal>
-        ))}
+      <div
+        className="grid col-span-12 mt-4 md:mt-2 px-14 pt-80 pb-10 rounded-xl mx-3 md:grid-cols-2 xl:grid-cols-4 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${benefitsBg})` }}
+      >
+        <div className="col-span-12 mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {BENEFITS.map((b, i) => (
+            <Reveal key={b.title} delay={i * 0.06}>
+              <GlassCard
+                interactive
+                variant="strong2"
+                className="group flex h-full flex-col p-6 sm:p-7"
+              >
+                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brand-900 to-brand-700 text-white shadow-[var(--shadow-elegant)] transition-transform duration-500 group-hover:scale-110">
+                  <b.icon className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 font-display text-lg font-bold text-brand-900">
+                  {b.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{b.body}</p>
+              </GlassCard>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </SectionShell>
   );
