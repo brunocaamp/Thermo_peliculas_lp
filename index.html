@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#224366" />
+    <title>Thermo Películas — Películas Nanocerâmicas em Volta Redonda e Sul Fluminense</title>
+    <meta name="description" content="Bloqueamos até 99% dos raios UV e 97% da radiação infravermelha mantendo a luz natural. Películas nanocerâmicas instaladas em Volta Redonda e todo o Sul Fluminense." />
+    
+    <link rel="preconnect" href="https://use.typekit.net" />
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.typekit.net/glj0dtk.css" />
+    
+    <!-- Se tiver um favicon, adicione aqui -->
+    <link rel="icon" type="image/png" href="/src/assets/landing/favicon.png" />
+  </head>
+  <body>
+    <!-- ─── Preloader — renders at 0 ms, before any JS ─── -->
+    <div
+      id="site-preloader"
+      style="position: fixed; inset: 0; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; background: radial-gradient(60% 55% at 20% 10%, rgba(115,150,180,.15), transparent 55%), radial-gradient(50% 45% at 80% 85%, rgba(34,67,102,.08), transparent 55%), linear-gradient(180deg,#ffffff 0%,#f5f8fb 50%,#eef3f8 100%); transition: opacity 0.85s cubic-bezier(0.22,1,0.36,1), visibility 0.85s linear;"
+      aria-label="Carregando página"
+      role="progressbar"
+      aria-busy="true"
+    >
+      <style>
+        #site-preloader.preloader-exit { opacity: 0; visibility: hidden; pointer-events: none; }
+        @keyframes pl-spin  { to { transform: rotate(360deg); } }
+        @keyframes pl-pulse { 0%,100% { opacity:.55; transform:scale(1); } 50% { opacity:1; transform:scale(1.13); } }
+        @keyframes pl-blob  { 0%,100% { transform:translateY(0) scale(1); } 50% { transform:translateY(-18px) scale(1.05); } }
+        @keyframes pl-bar   { 0% { transform:translateX(-100%); } 100% { transform:translateX(100%); } }
+        @keyframes pl-fade-in { from { opacity:0; transform:translateY(14px) scale(.94); } to { opacity:1; transform:translateY(0) scale(1); } }
+      </style>
+
+      <div aria-hidden="true" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
+        <div style="position: absolute; border-radius: 50%; filter: blur(72px); animation: pl-blob 6s ease-in-out infinite; width: 22rem; height: 22rem; left: -8%; top: 10%; background: rgba(115,150,180,.22);"></div>
+        <div style="position: absolute; border-radius: 50%; filter: blur(72px); animation: pl-blob 7s ease-in-out infinite reverse; width: 18rem; height: 18rem; right: -5%; bottom: 15%; background: rgba(196,214,230,.35);"></div>
+        <div style="position: absolute; border-radius: 50%; filter: blur(72px); animation: pl-blob 5s ease-in-out infinite; animation-delay: 1s; width: 14rem; height: 14rem; left: 35%; bottom: 5%; background: rgba(34,67,102,.08);"></div>
+      </div>
+
+      <div style="position: relative; animation: pl-fade-in .7s cubic-bezier(0.22,1,0.36,1) both;">
+        <div aria-hidden="true" style="position: absolute; inset: -16px; border-radius: 50%; background: radial-gradient(circle, rgba(34,67,102,.14) 0%, transparent 70%); animation: pl-pulse 2s ease-in-out infinite;"></div>
+        <div style="width: 120px; height: 120px; animation: pl-spin 1.6s linear infinite;">
+          <svg viewBox="0 0 120 120" style="width: 100%; height: 100%;">
+            <defs>
+              <linearGradient id="pl-g" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#224366" />
+                <stop offset="50%" stop-color="#7396b4" />
+                <stop offset="100%" stop-color="#c4d6e6" />
+              </linearGradient>
+            </defs>
+            <circle cx="60" cy="60" r="54" fill="none" stroke="url(#pl-g)" stroke-width="3" stroke-linecap="round" stroke-dasharray="240 100" />
+          </svg>
+        </div>
+        <div style="position: absolute; inset: 14px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,.65); backdrop-filter: blur(16px) saturate(140%); border: 1px solid rgba(255,255,255,.88); box-shadow: 0 4px 16px rgba(34,67,102,.08), inset 0 1px 0 rgba(255,255,255,.9);">
+          <img src="/src/assets/landing/logo-default.png" alt="Thermo Películas" style="width: 52px; height: auto; object-fit: contain; animation: pl-fade-in .6s cubic-bezier(0.22,1,0.36,1) .25s both;" />
+        </div>
+      </div>
+
+      <div style="width: 140px; height: 3px; border-radius: 999px; background: rgba(34,67,102,.08); overflow: hidden; animation: pl-fade-in .7s cubic-bezier(0.22,1,0.36,1) .1s both;">
+        <div style="height: 100%; border-radius: 999px; background: linear-gradient(90deg,#224366,#7396b4,#c4d6e6); animation: pl-bar 1.3s ease-in-out infinite;"></div>
+      </div>
+    </div>
+    <!-- ─── End Preloader ─── -->
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useServerFn } from "@tanstack/react-start";
 import { toast } from "sonner";
 import { ArrowRight, MapPin, MessageCircle, Phone } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
@@ -24,7 +23,6 @@ function maskWhatsapp(v: string) {
 }
 
 export function ContactForm() {
-  const submit = useServerFn(submitLead);
   const [pending, setPending] = useState(false);
   const {
     register,
@@ -40,7 +38,7 @@ export function ContactForm() {
   const onSubmit = handleSubmit(async (data) => {
     setPending(true);
     try {
-      await submit({ data });
+      await submitLead(data);
       toast.success("Recebemos seu contato! Em breve um especialista falará com você.");
       reset();
     } catch {

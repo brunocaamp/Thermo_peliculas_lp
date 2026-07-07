@@ -1,4 +1,3 @@
-import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
 export const LeadSchema = z.object({
@@ -12,10 +11,9 @@ export const LeadSchema = z.object({
 
 export type Lead = z.infer<typeof LeadSchema>;
 
-export const submitLead = createServerFn({ method: "POST" })
-  .inputValidator((data: unknown) => LeadSchema.parse(data))
-  .handler(async ({ data }) => {
-    // TODO: integrar com email / CRM / WhatsApp API
-    console.log("[lead]", data);
-    return { ok: true as const };
-  });
+export const submitLead = async (data: unknown) => {
+  const parsedData = LeadSchema.parse(data);
+  // TODO: integrar com email / CRM / WhatsApp API
+  console.log("[lead]", parsedData);
+  return { ok: true as const };
+};
