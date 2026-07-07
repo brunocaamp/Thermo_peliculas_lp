@@ -16,7 +16,7 @@ import { Footer } from "@/components/landing/Footer";
 import { FloatingWhatsApp } from "@/components/landing/FloatingWhatsApp";
 
 const TITLE =
-  "Thermo Películas — Películas Nanocerâmicas em Volta Redonda e Sul Fluminense";
+  "Thermopelícula — Películas Nanocerâmicas em Volta Redonda e Sul Fluminense";
 const DESCRIPTION =
   "Bloqueamos até 99% dos raios UV e 97% da radiação infravermelha mantendo a luz natural. Películas nanocerâmicas instaladas em Volta Redonda e todo o Sul Fluminense.";
 
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          name: "Thermo Películas",
+          name: "Thermopelícula",
           description: DESCRIPTION,
           image: heroAsset.url,
           telephone: "+55-24-99999-9999",

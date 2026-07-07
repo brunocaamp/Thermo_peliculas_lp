@@ -70,7 +70,7 @@ export function HowItWorks() {
           <PrimaryCTA href="#contato">
             Solicitar orçamento
           </PrimaryCTA>
-          <WhatsAppCTA href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20Thermo%20Pel%C3%ADculas">
+          <WhatsAppCTA href="https://wa.me/5511994575663?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20Thermopel%C3%ADcula">
             Falar no WhatsApp
           </WhatsAppCTA>
         </div>

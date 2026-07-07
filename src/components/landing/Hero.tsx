@@ -35,7 +35,7 @@ export function Hero() {
                 <span className="relative inline-block">
                   <span className="relative z-10">luz natural</span>
                 </span>
-                e conforto térmico.
+                 e conforto térmico.
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
                 Instalamos películas nanocerâmicas que bloqueiam até{" "}
@@ -48,7 +48,7 @@ export function Hero() {
                 <PrimaryCTA href="#contato">
                   Solicitar orçamento
                 </PrimaryCTA>
-                <WhatsAppCTA href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20Thermo%20Pel%C3%ADculas">
+                <WhatsAppCTA href="https://wa.me/5511994575663?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20Thermopel%C3%ADcula">
                   Falar no WhatsApp
                 </WhatsAppCTA>
               </div>

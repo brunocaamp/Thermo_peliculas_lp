@@ -73,7 +73,7 @@ export function ContactForm() {
           <GlassCard className="p-6 sm:p-8">
             <div className="flex flex-col gap-4">
               <a
-                href="https://wa.me/5524999999999?text=Ol%C3%A1%20Thermo%2C%20gostaria%20de%20um%20or%C3%A7amento"
+                href="https://wa.me/5511994575663?text=Ol%C3%A1%20Thermo%2C%20gostaria%20de%20um%20or%C3%A7amento"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4 rounded-3xl bg-[#25D366] p-5 text-white transition-all duration-300 hover:bg-[#128C7E] hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#25D366]/30"

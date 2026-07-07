@@ -32,7 +32,7 @@ export function Comparison() {
           id="comparativo-title"
           className="mt-4 text-[clamp(2.1rem,4.08vw,3.3rem)] font-extrabold leading-tight text-brand-900"
         >
-          Com e sem Thermo Películas
+          Com e sem Thermopelícula
         </h2>
       </Reveal>
 
@@ -66,7 +66,7 @@ export function Comparison() {
             className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-400/0 via-brand-900 to-brand-400/0"
           />
           <PreTitle variant="dark">
-            Com Thermo Películas
+            Com Thermopelícula
           </PreTitle>
           <ul className="mt-6 space-y-4">
             {WITH.map((item) => (
@@ -83,7 +83,7 @@ export function Comparison() {
           <PrimaryCTA href="#contato">
             Solicitar orçamento
           </PrimaryCTA>
-          <WhatsAppCTA href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20Thermo%20Pel%C3%ADculas">
+          <WhatsAppCTA href="https://wa.me/5511994575663?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20Thermopel%C3%ADcula">
             Falar no WhatsApp
           </WhatsAppCTA>
         </div>

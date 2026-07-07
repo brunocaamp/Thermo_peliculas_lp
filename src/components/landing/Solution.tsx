@@ -56,7 +56,7 @@ export function Solution() {
         className="col-span-12 lg:col-[8_/_span_5] lg:self-center"
       >
         <PreTitle>
-          Sobre a Thermo Películas
+          Sobre a Thermopelícula
         </PreTitle>
         <h2
           id="solucao-title"
@@ -65,7 +65,7 @@ export function Solution() {
           A solução definitiva está nos seus vidros.
         </h2>
         <p className="mt-5 text-base leading-relaxed text-ink-soft sm:text-lg">
-          A Thermo Películas transforma a experiência dentro da sua casa. Especialistas em
+          A Thermopelícula transforma a experiência dentro da sua casa. Especialistas em
           Volta Redonda e em todo o Sul Fluminense, instalamos películas de controle solar
           com tecnologia de nanocerâmica.
         </p>
@@ -79,7 +79,7 @@ export function Solution() {
           <PrimaryCTA href="#contato">
             Solicitar orçamento
           </PrimaryCTA>
-          <WhatsAppCTA href="https://wa.me/5524999999999?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20Thermo%20Pel%C3%ADculas">
+          <WhatsAppCTA href="https://wa.me/5511994575663?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20Thermopel%C3%ADcula">
             Falar no WhatsApp
           </WhatsAppCTA>
         </div>

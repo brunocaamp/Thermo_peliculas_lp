@@ -17,7 +17,7 @@ const REVIEWS = [
   {
     headline: "O ar-condicionado finalmente dá conta do recado!",
     body:
-      "Moro em um apartamento que recebe o sol da tarde direto na sala. Antes, o ar-condicionado ficava no máximo e a casa continuava quente. Depois que a equipe da Thermo Películas instalou o material de nanocerâmica, a diferença foi imediata. A sala ficou muito mais fresca e o ar gela rapidinho agora. Excelente investimento!",
+      "Moro em um apartamento que recebe o sol da tarde direto na sala. Antes, o ar-condicionado ficava no máximo e a casa continuava quente. Depois que a equipe da Thermopelícula instalou o material de nanocerâmica, a diferença foi imediata. A sala ficou muito mais fresca e o ar gela rapidinho agora. Excelente investimento!",
     author: "Carlos E.",
     city: "Volta Redonda — RJ",
   },
@@ -59,7 +59,7 @@ export function Testimonials() {
           id="depoimentos-title"
           className="mt-4 text-[clamp(2.1rem,4.08vw,3.3rem)] font-extrabold leading-tight text-white"
         >
-          Quem protege a casa com a Thermo Películas comprova a eficiência.
+          Quem protege a casa com a Thermopelícula comprova a eficiência.
         </h2>
       </Reveal>
 

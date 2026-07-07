@@ -50,8 +50,8 @@ export function Header() {
               : "glass"
         )}
       >
-        <a href="#hero" aria-label="Thermo Películas — início" className="min-w-0">
-          <img src={logoDefault} alt="Thermo Películas Logo" className="h-10 pl-[0.4rem] w-auto" />
+        <a href="#hero" aria-label="Thermopelícula — início" className="min-w-0">
+          <img src={logoDefault} alt="Thermopelícula Logo" className="h-10 pl-[0.4rem] w-auto" />
         </a>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegação principal">
           {NAV.map((item) => (
@@ -64,7 +64,7 @@ export function Header() {
             </a>
           ))}
           <a
-            href="https://wa.me/5500000000000"
+            href="https://wa.me/5511994575663"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white shadow-[var(--shadow-elegant)] transition-all hover:bg-[#128C7E]"
@@ -101,7 +101,7 @@ export function Header() {
               </a>
             ))}
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5511994575663"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}

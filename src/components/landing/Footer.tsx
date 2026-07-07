@@ -8,7 +8,7 @@ import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 export function Footer() {
   return (
     <footer className="relative w-full pb-50 pt-[4rem] overflow-hidden">
-      <img src={logo_footer} alt="Logo Thermo Peliculas Footer" className="absolute bottom-[-4rem] z-0 opacity-[80%]" />
+      <img src={logo_footer} alt="Logo Thermopelícula Footer" className="absolute bottom-[-4rem] z-0 opacity-[80%]" />
       <div className="mx-[4vw]">
         <GlassCard variant="strong2" className="p-8 md:p-12">
 
@@ -16,7 +16,7 @@ export function Footer() {
 
           <div className="grid grid-cols-1 gap-10 md:grid-cols-12 pt-6">
             <div className="md:col-span-5">
-              <img src={logoImg} alt="Thermo Películas" className="h-[5rem] w-auto" />
+              <img src={logoImg} alt="Thermopelícula" className="h-[5rem] w-auto" />
               <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink-soft">
                 Películas nanocerâmicas de controle solar instaladas com precisão em Volta
                 Redonda e em todo o Sul Fluminense.
@@ -61,7 +61,7 @@ export function Footer() {
                 <li className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
                   <WhatsAppIcon className="h-5 w-5 shrink-0 text-brand-900" />
                   <a
-                    href="https://wa.me/5524999999999"
+                    href="https://wa.me/5511994575663"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium text-brand-700 transition-colors hover:text-brand-900"
@@ -92,7 +92,7 @@ export function Footer() {
           </div>
 
           <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-brand-200/50 pt-6 text-xs text-ink-soft sm:flex-row sm:items-center">
-            <p>© {new Date().getFullYear()} Thermo Películas. Todos os direitos reservados.</p>
+            <p>© {new Date().getFullYear()} Thermopelícula. Todos os direitos reservados.</p>
             <p>Desenvolvido por Tática</p>
           </div>
         </GlassCard>
