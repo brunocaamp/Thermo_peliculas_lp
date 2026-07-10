@@ -12,14 +12,23 @@ export function WhatsAppIcon({ className }: { className?: string }) {
   );
 }
 
-const NAV = [
+type NavItem = { href: string; label: string };
+
+const NAV: NavItem[] = [
   { href: "#solucao", label: "Solução" },
   { href: "#beneficios", label: "Benefícios" },
   { href: "#depoimentos", label: "Depoimentos" },
   { href: "#faq", label: "FAQ" },
 ];
 
-export function Header() {
+type HeaderProps = {
+  /** Destino do logo. Padrão "#hero" (âncora na própria home). */
+  logoHref?: string;
+  /** Itens do menu. Padrão são as âncoras da landing principal. */
+  nav?: NavItem[];
+};
+
+export function Header({ logoHref = "#hero", nav = NAV }: HeaderProps = {}) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -50,11 +59,11 @@ export function Header() {
               : "glass"
         )}
       >
-        <a href="#hero" aria-label="Thermopelícula — início" className="min-w-0">
+        <a href={logoHref} aria-label="Thermopelícula — início" className="min-w-0">
           <img src={logoDefault} alt="Thermopelícula Logo" className="h-10 pl-[0.4rem] w-auto" />
         </a>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegação principal">
-          {NAV.map((item) => (
+          {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
@@ -90,7 +99,7 @@ export function Header() {
             className="glass-strong flex flex-col gap-1 rounded-3xl p-3"
             aria-label="Navegação mobile"
           >
-            {NAV.map((item) => (
+            {nav.map((item) => (
               <a
                 key={item.href}
                 href={item.href}

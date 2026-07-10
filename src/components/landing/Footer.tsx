@@ -66,7 +66,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="font-medium text-brand-700 transition-colors hover:text-brand-900"
                   >
-                    (24) 99999-9999
+                    (11) 99457-5663
                   </a>
                 </li>
                 <li className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
@@ -75,7 +75,7 @@ export function Footer() {
                     href="mailto:contato@thermopeliculas.com.br"
                     className="font-medium text-brand-700 transition-colors hover:text-brand-900"
                   >
-                    contato@thermopeliculas.com.br
+                    contato@thermopelicula.com.br
                   </a>
                 </li>
                 <li className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
@@ -84,7 +84,7 @@ export function Footer() {
                     href="#"
                     className="font-medium text-brand-700 transition-colors hover:text-brand-900"
                   >
-                    @thermopeliculas
+                    @thermopelicula
                   </a>
                 </li>
               </ul>

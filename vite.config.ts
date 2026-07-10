@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
-  base: "/clientes/thermopelicula/",
+  base: "/",
   plugins: [
     TanStackRouterVite(),
     react(),

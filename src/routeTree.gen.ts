@@ -9,8 +9,20 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as OrcamentoV2RouteImport } from './routes/orcamento-v2'
+import { Route as OrcamentoRouteImport } from './routes/orcamento'
 import { Route as IndexRouteImport } from './routes/index'
 
+const OrcamentoV2Route = OrcamentoV2RouteImport.update({
+  id: '/orcamento-v2',
+  path: '/orcamento-v2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrcamentoRoute = OrcamentoRouteImport.update({
+  id: '/orcamento',
+  path: '/orcamento',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +31,50 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/orcamento': typeof OrcamentoRoute
+  '/orcamento-v2': typeof OrcamentoV2Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/orcamento': typeof OrcamentoRoute
+  '/orcamento-v2': typeof OrcamentoV2Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/orcamento': typeof OrcamentoRoute
+  '/orcamento-v2': typeof OrcamentoV2Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/orcamento' | '/orcamento-v2'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/orcamento' | '/orcamento-v2'
+  id: '__root__' | '/' | '/orcamento' | '/orcamento-v2'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  OrcamentoRoute: typeof OrcamentoRoute
+  OrcamentoV2Route: typeof OrcamentoV2Route
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/orcamento-v2': {
+      id: '/orcamento-v2'
+      path: '/orcamento-v2'
+      fullPath: '/orcamento-v2'
+      preLoaderRoute: typeof OrcamentoV2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/orcamento': {
+      id: '/orcamento'
+      path: '/orcamento'
+      fullPath: '/orcamento'
+      preLoaderRoute: typeof OrcamentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +87,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  OrcamentoRoute: OrcamentoRoute,
+  OrcamentoV2Route: OrcamentoV2Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
